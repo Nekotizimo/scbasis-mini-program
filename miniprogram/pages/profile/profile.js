@@ -19,7 +19,7 @@ Page({
       grade: 10,
       city: "Guangzhou",
       // whatsUp: "this is a long what's up to test text wrapping poggers omegalul",
-      whatsUp: "poggers",
+      whatsUp: "",
       totalPosts: 7,
       totalComments: 69,
       wechatID: "gayboi69420",
@@ -28,9 +28,136 @@ Page({
     }
   },
 
-  /**
+  getSchool: function (event) {
+    this.setData({
+      "user.school": event.detail.value
+    })
+    console.log(this.data.user.school)
+  },
+
+  submitSchool: function () {
+    console.log('success')
+    this.setData({
+      "user.schoolSet": true
+    });
+  }, 
+
+  editSchool: function () {
+    console.log('success')
+    this.setData({
+      "user.schoolSet": false
+    });
+  },
+
+  getGrade: function (event) {
+    this.setData({
+      "user.grade": event.detail.value
+    })
+    console.log(this.data.user.grade)
+  },
+
+  submitGrade: function () {
+    console.log('success')
+    this.setData({
+      "user.gradeSet": true
+    });
+  },
+
+  editGrade: function () {
+    console.log('success')
+    this.setData({
+      "user.gradeSet": false
+    });
+  },
+
+  getCity: function (event) {
+    this.setData({
+      "user.city": event.detail.value
+    })
+    console.log(this.data.user.city)
+  },
+
+  submitCity: function () {
+    console.log('success')
+    this.setData({
+      "user.citySet": true
+    });
+  },
+
+  editCity: function () {
+    console.log('success')
+    this.setData({
+      "user.citySet": false
+    });
+  },
+
+  getWhatsUpData: function(event){
+    this.setData({
+      "user.whatsUp": event.detail.value
+    })
+    console.log(this.data.user.whatsUp)
+  },
+
+  submitWhatsUp: function() {
+    console.log('success')
+    this.setData({
+      "user.whatsUpSet": true
+    });
+  },
+
+  editWhatsUp: function(){
+    console.log('success')
+    this.setData({
+      "user.whatsUpSet": false
+    });
+  },
+
+  getWeChatID: function (event) {
+    this.setData({
+      "user.wechatID": event.detail.value
+    })
+    console.log(this.data.user.wechatID)
+  },
+
+  submitWeChatID: function () {
+    console.log('success')
+    this.setData({
+      "user.WeChatIDSet": true
+    });
+  },
+
+  editWeChatID: function() {
+    console.log('success')
+    this.setData({
+      "user.WeChatIDSet": false
+    });
+  },
+
+  getInstagram: function (event) {
+    this.setData({
+      "user.instagram": event.detail.value
+    })
+    console.log(this.data.user.instagram)
+  },
+
+  submitInstagram: function () {
+    console.log('success')
+    this.setData({
+      "user.InstagramSet": true
+    });
+  },
+
+  editInstagram: function () {
+    console.log('success')
+    this.setData({
+      "user.InstagramSet": false
+      
+    });
+  },
+   /**
    * Lifecycle function--Called when page load
    */
+
   onLoad: function(options) {
     if (app.globalData.userInfo) {
       this.setData({
@@ -121,11 +248,5 @@ Page({
   loadMore: function(){
 
   },
-
-  submitWhatsUp: function() {
-    console.log('success')
-    var forms = document.getElementById("What's up");
-    forms.style["display"] = 'none';
-  }
 
 })
